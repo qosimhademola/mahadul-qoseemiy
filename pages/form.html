@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Registration Form</title>
+    <link rel="shortcut icon" href="../images/qossemiy logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <form action="https://formsubmit.co/kamaludeenfolohunsho@gmail.com" method="POST" class="bg-white rounded-lg shadow-md p-6">
+            <!-- Form Header -->
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-bold text-blue-800">Student Registration Form</h1>
+                <h2 class="text-xl font-semibold text-blue-600 mt-2">استمارة تسجيل الطلاب الجدد</h2>
+                <p class="text-gray-600 mt-2">Please fill out all required fields</p>
+                <input type="hidden" name="_subject" value="New Student Registration">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
+
+            <!-- Student Information Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Student Information / معلومات الطالب</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
+                        <input type="text" name="Student Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Date of Birth / تاريخ الميلاد</label>
+                        <input type="date" name="Date of Birth" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Nationality / الجنسية</label>
+                        <input type="text" name="Nationality" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Address / العنوان</label>
+                        <input type="text" name="Address" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Student Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
+                        <input type="email" name="Student Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parent Information Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Parent/Guardian Information / معلومات الوالدين</h3>
+                
+                <h4 class="font-medium text-gray-700 mb-3">Father's Information / معلومات الأب</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
+                        <input type="text" name="Father's Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Occupation / المهنة</label>
+                        <input type="text" name="Father's Occupation" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Father's Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
+                        <input type="email" name="Father's Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    </div>
+                </div>
+
+                <h4 class="font-medium text-gray-700 mb-3">Mother's Information / معلومات الأم</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
+                        <input type="text" name="Mother's Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Occupation / المهنة</label>
+                        <input type="text" name="Mother's Occupation" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Mother's Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
+                        <input type="email" name="Mother's Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Information Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Academic Information / معلومات أكاديمية</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Grade Level / المستوى الدراسي</label>
+                        <select name="Grade Level" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                            <option value="">Select Grade</option>
+                            <option value="kg">Kindergarten</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Previous School / المدرسة السابقة</label>
+                        <input type="text" name="Previous School" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-1">Previous Certificates / شهادات سابقة</label>
+                        <textarea name="Previous Certificates" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Requirements Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Special Requirements / متطلبات خاصة</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <label class="block text-gray-700 mr-4">Do you have any special needs? / هل لديك احتياجات خاصة؟</label>
+                        <div class="flex items-center space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="Special Needs" value="yes" class="form-radio text-blue-600">
+                                <span class="ml-2">Yes / نعم</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="Special Needs" value="no" class="form-radio text-blue-600" checked>
+                                <span class="ml-2">No / لا</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 mb-1">If yes, please specify / إذا نعم، يرجى توضيح</label>
+                        <textarea name="Special Needs Details" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Signature / التوقيع</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Signature / التوقيع</label>
+                        <input type="text" name="Signature" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Date / التاريخ</label>
+                        <input type="date" name="Date" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Section -->
+            <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                <h4 class="font-semibold text-blue-800 mb-2">Notes / ملاحظات</h4>
+                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>Please note that all information provided must be accurate and up-to-date.</li>
+                    <li>يرجى ملاحظة أن جميع المعلومات المقدمة يجب أن تكون دقيقة و صحيحة.</li>
+                    <li>Please submit required documents within the specified timeframe.</li>
+                    <li>يرجى تقديم المستندات المطلوبة في الوقت المحدد.</li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150">
+                    Submit Form / تقديم الطلب
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

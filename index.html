@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHADUL-QOSIMEEY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../images/qossemiy logo.png" type="image/x-icon">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="./images/qossemiy logo.png" alt=""  width="70px">
+                <a href="index.html" class="text-2xl font-bold">MAHADUL-QOSIMEEY</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-200">Home</a>
+                <a href="./pages/course.html" class="hover:text-yellow-200">Courses</a> 
+                <a href="./pages/contact us.html" class="hover:text-yellow-200">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-green-700" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="index.html" class="hover:text-yellow-200 py-2">Home</a>
+                <a href="./pages/course.html" class="hover:text-yellow-200 py-2">Courses</a>
+                <!-- <a href="#" class="hover:text-yellow-200 py-2">About</a> -->
+                <a href="./pages/contact us.html" class="hover:text-yellow-200 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-700 to-green-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Learn Islam Online</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Comprehensive Islamic education with qualified scholars. Learn Quran, Arabic, Fiqh and more from the comfort of your home.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="./pages/course.html" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg">Browse Courses</a>
+                <a href="./pages/form.html" class="bg-transparent hover:bg-green-800 text-white font-bold py-3 px-6 border border-white rounded-lg">Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">What We Offer</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-green-700 text-4xl mb-4">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quran Classes</h3>
+                    <p>Learn Quran recitation with Tajweed, memorization (Hifz), and Tafseer from qualified Qaris.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-green-700 text-4xl mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Live Interactive Classes</h3>
+                    <p>Real-time classes via Zoom with experienced teachers and small group sizes for better learning.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-green-700 text-4xl mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certification</h3>
+                    <p>Receive recognized certificates upon course completion to validate your Islamic knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Popular Courses</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OSK.HEROR_fjH-uNgo5SIHssUiYKlRwx1bKIDVEjlMDSzgg967Q?w=472&h=280&c=13&rs=2&o=6&dpr=1.3&pid=SANGAM" alt="Quran Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Quran with Tajweed</h3>
+                        <p class="text-gray-600 mb-4">Learn proper Quran recitation with rules of Tajweed from basics to advanced.</p>
+                        <div class="flex justify-between items-center">
+                            <!-- <span class="font-bold text-green-700">$29/month</span> -->
+                            <a href="./pages/form.html" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">Join Class</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.xFFg4wULEaQFGFe5pcoCEwHaEK?cb=iwc1&rs=1&pid=ImgDetMain" alt="Arabic Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Arabic for Beginners</h3>
+                        <p class="text-gray-600 mb-4">Master the Arabic language to understand Quran and Hadith in their original form.</p>
+                        <div class="flex justify-between items-center">
+                            <!-- <span class="font-bold text-green-700">$25/month</span> -->
+                            <a href="./pages/form.html" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">Join Class</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.PrWRaCHyOcE4qs6Ys_BaSwHaH3?w=164&h=180&c=7&r=0&o=5&cb=iwc1&dpr=1.3&pid=1.7" alt="Fiqh Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Islamic Fiqh</h3>
+                        <p class="text-gray-600 mb-4">Learn practical Islamic jurisprudence for daily life according to authentic sources.</p>
+                        <div class="flex justify-between items-center">
+                            <!-- <span class="font-bold text-green-700">$35/month</span> -->
+                            <a href="./pages/form.html" class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded">Join Class</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="./pages/course.html" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-lg">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">MAHADUL-QOSIMEEY</h3>
+                    <p class="mb-4">Providing authentic Islamic education online since 2023.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61570431050608" class="hover:text-yellow-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/2348123269888" class="hover:text-yellow-200"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/mahadulqoseemiy" class="hover:text-yellow-200"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-200">Home</a></li>
+                        <li><a href="courses.html" class="hover:text-yellow-200">Courses</a></li>
+                        <li><a href="#" class="hover:text-yellow-200">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-200">Quran with Tajweed</a></li>
+                        <li><a href="#" class="hover:text-yellow-200">Arabic Language</a></li>
+                        <li><a href="#" class="hover:text-yellow-200">Islamic Fiqh</a></li>
+                        <li><a href="#" class="hover:text-yellow-200">Hadith Studies</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span> +234-812-326-9888</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>kamaludeenfolohunsho@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-green-700 mt-8 pt-8 text-center">
+                <p>&copy;2023 MAHADUL-QOSIMEEY Islamic Learning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- git init
+ git add . 
+ git commit -m ""
+ git remote add origin https://github.com/qosimhademola/mahadul-qoseemiy.git
+git push -u origin main
+  -->
+    <script src="./js/index.js"></script> 
+</body>
+</html>
