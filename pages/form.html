@@ -5,104 +5,279 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Registration Form</title>
     <link rel="shortcut icon" href="../images/qossemiy logo.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e40af;
+        }
+        
+        .form-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2563eb;
+            margin-top: 0.5rem;
+        }
+        
+        .form-header p {
+            color: #4b5563;
+            margin-top: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subsection-title {
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .full-width {
+                grid-column: span 2;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            color: #374151;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #93c5fd;
+            box-shadow: 0 0 0 2px rgba(147, 197, 253, 0.5);
+        }
+        
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-options {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .radio-option {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .radio-option input {
+            margin-right: 0.5rem;
+        }
+        
+        .notes-box {
+            background-color: #eff6ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .notes-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notes-list {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            color: #374151;
+        }
+        
+        .notes-list li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .submit-btn {
+            background-color: #2563eb;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+            text-align: center;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .submit-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-4 max-w-4xl">
-        <form action="https://formsubmit.co/kamaludeenfolohunsho@gmail.com" method="POST" class="bg-white rounded-lg shadow-md p-6">
+<body>
+    <div class="container">
+        <form action="https://formsubmit.co/kamaludeenfolohunsho@gmail.com" method="POST" class="form-container">
             <!-- Form Header -->
-            <div class="text-center mb-8">
-                <h1 class="text-2xl font-bold text-blue-800">Student Registration Form</h1>
-                <h2 class="text-xl font-semibold text-blue-600 mt-2">استمارة تسجيل الطلاب الجدد</h2>
-                <p class="text-gray-600 mt-2">Please fill out all required fields</p>
+            <div class="form-header">
+                <h1>Student Registration Form</h1>
+                <h2>استمارة تسجيل الطلاب الجدد</h2>
+                <p>Please fill out all required fields</p>
                 <input type="hidden" name="_subject" value="New Student Registration">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
             </div>
 
             <!-- Student Information Section -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Student Information / معلومات الطالب</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
-                        <input type="text" name="Student Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+            <div class="form-section">
+                <h3 class="section-title">Student Information / معلومات الطالب</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name / الاسم</label>
+                        <input type="text" name="Student Name" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Date of Birth / تاريخ الميلاد</label>
-                        <input type="date" name="Date of Birth" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Date of Birth / تاريخ الميلاد</label>
+                        <input type="date" name="Date of Birth" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Nationality / الجنسية</label>
-                        <input type="text" name="Nationality" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Nationality / الجنسية</label>
+                        <input type="text" name="Nationality" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Address / العنوان</label>
-                        <input type="text" name="Address" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Address / العنوان</label>
+                        <input type="text" name="Address" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
-                        <input type="tel" name="Student Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Student Phone" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
-                        <input type="email" name="Student Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    <div class="form-group">
+                        <label>Email / البريد الإلكتروني</label>
+                        <input type="email" name="Student Email">
                     </div>
                 </div>
             </div>
 
             <!-- Parent Information Section -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Parent/Guardian Information / معلومات الوالدين</h3>
+            <div class="form-section">
+                <h3 class="section-title">Parent/Guardian Information / معلومات الوالدين</h3>
                 
-                <h4 class="font-medium text-gray-700 mb-3">Father's Information / معلومات الأب</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
-                        <input type="text" name="Father's Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                <h4 class="subsection-title">Father's Information / معلومات الأب</h4>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name / الاسم</label>
+                        <input type="text" name="Father's Name" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Occupation / المهنة</label>
-                        <input type="text" name="Father's Occupation" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Occupation / المهنة</label>
+                        <input type="text" name="Father's Occupation" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
-                        <input type="tel" name="Father's Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Father's Phone" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
-                        <input type="email" name="Father's Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    <div class="form-group">
+                        <label>Email / البريد الإلكتروني</label>
+                        <input type="email" name="Father's Email">
                     </div>
                 </div>
 
-                <h4 class="font-medium text-gray-700 mb-3">Mother's Information / معلومات الأم</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1">Name / الاسم</label>
-                        <input type="text" name="Mother's Name" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                <h4 class="subsection-title">Mother's Information / معلومات الأم</h4>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name / الاسم</label>
+                        <input type="text" name="Mother's Name" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Occupation / المهنة</label>
-                        <input type="text" name="Mother's Occupation" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Occupation / المهنة</label>
+                        <input type="text" name="Mother's Occupation" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Phone Number / رقم الهاتف</label>
-                        <input type="tel" name="Mother's Phone" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Phone Number / رقم الهاتف</label>
+                        <input type="tel" name="Mother's Phone" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Email / البريد الإلكتروني</label>
-                        <input type="email" name="Mother's Email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    <div class="form-group">
+                        <label>Email / البريد الإلكتروني</label>
+                        <input type="email" name="Mother's Email">
                     </div>
                 </div>
             </div>
 
             <!-- Academic Information Section -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Academic Information / معلومات أكاديمية</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1">Grade Level / المستوى الدراسي</label>
-                        <select name="Grade Level" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+            <div class="form-section">
+                <h3 class="section-title">Academic Information / معلومات أكاديمية</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Grade Level / المستوى الدراسي</label>
+                        <select name="Grade Level" required>
                             <option value="">Select Grade</option>
                             <option value="kg">Kindergarten</option>
                             <option value="1">Grade 1</option>
@@ -119,60 +294,62 @@
                             <option value="12">Grade 12</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Previous School / المدرسة السابقة</label>
-                        <input type="text" name="Previous School" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+                    <div class="form-group">
+                        <label>Previous School / المدرسة السابقة</label>
+                        <input type="text" name="Previous School">
                     </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-gray-700 mb-1">Previous Certificates / شهادات سابقة</label>
-                        <textarea name="Previous Certificates" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" rows="2"></textarea>
+                    <div class="form-group full-width">
+                        <label>Previous Certificates / شهادات سابقة</label>
+                        <textarea name="Previous Certificates" rows="2"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Special Requirements Section -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Special Requirements / متطلبات خاصة</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-center">
-                        <label class="block text-gray-700 mr-4">Do you have any special needs? / هل لديك احتياجات خاصة؟</label>
-                        <div class="flex items-center space-x-4">
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="Special Needs" value="yes" class="form-radio text-blue-600">
-                                <span class="ml-2">Yes / نعم</span>
-                            </label>
-                            <label class="inline-flex items-center">
-                                <input type="radio" name="Special Needs" value="no" class="form-radio text-blue-600" checked>
-                                <span class="ml-2">No / لا</span>
-                            </label>
+            <div class="form-section">
+                <h3 class="section-title">Special Requirements / متطلبات خاصة</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label style="margin-right: 1rem;">Do you have any special needs? / هل لديك احتياجات خاصة؟</label>
+                            <div class="radio-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="Special Needs" value="yes">
+                                    <span>Yes / نعم</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="Special Needs" value="no" checked>
+                                    <span>No / لا</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-gray-700 mb-1">If yes, please specify / إذا نعم، يرجى توضيح</label>
-                        <textarea name="Special Needs Details" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" rows="2"></textarea>
+                    <div class="form-group full-width">
+                        <label>If yes, please specify / إذا نعم، يرجى توضيح</label>
+                        <textarea name="Special Needs Details" rows="2"></textarea>
                     </div>
                 </div>
             </div>
 
             <!-- Signature Section -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold border-b pb-2 mb-4 text-blue-700">Signature / التوقيع</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 mb-1">Signature / التوقيع</label>
-                        <input type="text" name="Signature" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+            <div class="form-section">
+                <h3 class="section-title">Signature / التوقيع</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Signature / التوقيع</label>
+                        <input type="text" name="Signature" required>
                     </div>
-                    <div>
-                        <label class="block text-gray-700 mb-1">Date / التاريخ</label>
-                        <input type="date" name="Date" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+                    <div class="form-group">
+                        <label>Date / التاريخ</label>
+                        <input type="date" name="Date" required>
                     </div>
                 </div>
             </div>
 
             <!-- Notes Section -->
-            <div class="bg-blue-50 p-4 rounded-lg mb-6">
-                <h4 class="font-semibold text-blue-800 mb-2">Notes / ملاحظات</h4>
-                <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <div class="notes-box">
+                <h4 class="notes-title">Notes / ملاحظات</h4>
+                <ul class="notes-list">
                     <li>Please note that all information provided must be accurate and up-to-date.</li>
                     <li>يرجى ملاحظة أن جميع المعلومات المقدمة يجب أن تكون دقيقة و صحيحة.</li>
                     <li>Please submit required documents within the specified timeframe.</li>
@@ -182,7 +359,7 @@
 
             <!-- Submit Button -->
             <div class="text-center">
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150">
+                <button type="submit" class="submit-btn">
                     Submit Form / تقديم الطلب
                 </button>
             </div>

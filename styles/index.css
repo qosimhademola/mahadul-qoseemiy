@@ -1,0 +1,447 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+    /* Add this at the very top of your CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navigation */
+nav {
+    background-color: #166534;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    position: relative; /* Ensure nav stays within viewport */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Changed from space-around */
+    align-items: center;
+    padding: 12px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Rest of your existing CSS remains the same until the media queries */
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .hero-buttons {
+        flex-direction: row;
+        max-width: 500px; /* Added to prevent overflow */
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 24px;
+    }
+    
+    .mobile-menu-button {
+        display: none;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Add this to ensure images don't cause overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #166534;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 12px 16px;
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-brand img {
+            width: 70px;
+            height: auto;
+        }
+        
+        .nav-brand a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #fef08a;
+        }
+        
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .mobile-menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background-color: #15803d;
+            padding: 8px 16px;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 0;
+        }
+        
+        .mobile-menu a:hover {
+            color: #fef08a;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #166534, #14532d);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+            /* background-color: blue; */
+            width: 90%;
+            margin: auto;
+        }
+        
+        .btn-primary {
+            background-color: #b45309;
+            color: white;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background-color: #92400e;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            font-weight: 700;
+            padding: 12px 18px;
+            border: 1px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #166534;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 64px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: #166534;
+        }
+        
+        .features-grid {
+            display: grid;
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background-color: #f9fafb;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            color: #166534;
+            font-size: 2.25rem;
+            margin-bottom: 16px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        /* Courses Section */
+        .courses {
+            padding: 64px 0;
+            background-color: #f9fafb;
+        }
+        
+        .courses-grid {
+            display: grid;
+            gap: 32px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .course-card img {
+            width: 100%;
+            height: 192px;
+            object-fit: cover;
+        }
+        
+        .course-content {
+            padding: 24px;
+        }
+        
+        .course-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .course-content p {
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+        
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .course-btn {
+            background-color: #166534;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        
+        .course-btn:hover {
+            background-color: #14532d;
+        }
+        
+        .view-all {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #14532d;
+            color: white;
+            padding: 48px 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            gap: 32px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .footer-col p {
+            margin-bottom: 16px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-icons a {
+            color: white;
+        }
+        
+        .social-icons a:hover {
+            color: #fef08a;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #fef08a;
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+        }
+        
+        .footer-bottom {
+            /* border-top: 1px solid #166534;    */
+            margin-top: 32px;
+            padding-top: 32px;
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 24px;
+            }
+            
+            .mobile-menu-button {
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .courses-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
